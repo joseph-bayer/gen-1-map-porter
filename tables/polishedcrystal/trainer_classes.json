@@ -1,0 +1,18 @@
+{
+	"$comment": "Gen 1 trainer class -> the Polished Crystal class its trainers use when the project has no class of that name. A row in the project's trainer_classes.json overrides it.",
+	"BLACKBELT": "BLACKBELT_T",
+	"CHANNELER": "MEDIUM",
+	"COOLTRAINER_M": "COOLTRAINERM",
+	"COOLTRAINER_F": "COOLTRAINERF",
+	"JR_TRAINER_M": "CAMPER",
+	"JR_TRAINER_F": "PICNICKER",
+	"PSYCHIC_TR": "PSYCHIC_T",
+	"ROCKER": "GUITARISTM",
+	"ROCKET": "GRUNTM",
+	"SWIMMER": "SWIMMERM",
+	"RIVAL3": "BLUE",
+	"LANCE": "CHAMPION",
+	"CUE_BALL": "BIKER",
+	"GAMBLER": "POKEFANM",
+	"CHIEF": "GENTLEMAN"
+}

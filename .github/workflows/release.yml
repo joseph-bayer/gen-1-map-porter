@@ -1,0 +1,61 @@
+# Builds the porter's release folder (the .exe, its page and tables, manifest.json, the icon, the
+# license and THIRD_PARTY_NOTICES.txt) when a version tag (v1.2.3) is pushed, and hands it to the
+# Crystal Tool Suite's tool release workflow, which checks the manifest against the tag, zips the
+# folder, writes SHA256SUMS.txt and attaches both to a draft GitHub Release. Publishing the draft,
+# and listing it in the suite's index.json, are done by hand (crystal-tool-suite's
+# docs/RELEASING.md).
+
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Manifest matches package.json
+        run: node scripts/check-manifest.mjs
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      # Builds the server and the page, then the .exe and the release folder from them.
+      - name: Build and package
+        run: npm run package
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: tool
+          path: release/
+          if-no-files-found: error
+
+  release:
+    needs: build
+    permissions:
+      contents: write
+    # Pin to a commit of crystal-tool-suite: replace the zeros with its full commit SHA.
+    uses: joseph-bayer/crystal-tool-suite/.github/workflows/tool-release.yml@03a281f37446c3d9a7b80c10dcddc467098f8105 # main
+    with:
+      artifact: tool

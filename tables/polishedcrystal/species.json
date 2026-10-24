@@ -1,0 +1,5 @@
+{
+	"$comment": "Gen 1 species -> its Polished Crystal name, for names that differ. A row in the project's species.json overrides it.",
+	"FARFETCHD": "FARFETCH_D",
+	"MR_MIME": "MR__MIME"
+}

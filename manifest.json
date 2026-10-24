@@ -1,0 +1,12 @@
+{
+	"id": "gen1-map-porter",
+	"name": "Gen 1 Map Porter",
+	"version": "0.1.0",
+	"description": "Ports Red, Blue and Yellow maps, with their events, into a Crystal project: CrystalShireEngine, pokecrystal or Polished Crystal.",
+	"icon": "icon.png",
+	"entry": {
+		"windows": { "command": "node", "args": ["dist/server/index.js"] }
+	},
+	"folders": ["cse-project", "pokered", "pokeyellow"],
+	"minLauncher": "0.1.0"
+}

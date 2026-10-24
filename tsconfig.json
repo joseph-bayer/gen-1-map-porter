@@ -1,0 +1,10 @@
+{
+  "$comment": "Only for shadcn's CLI, which reads the @/ alias from here. The real projects are tsconfig.node.json and web/tsconfig.json.",
+  "files": [],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./web/src/*"]
+    }
+  }
+}

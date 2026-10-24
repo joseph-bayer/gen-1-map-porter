@@ -1,0 +1,21 @@
+{
+	"$comment": "Gen 1 trainer class -> the CSE class its trainers use when CSE has no class of that name. A row in the project's trainer_classes.json overrides it.",
+	"BLACKBELT": "BLACKBELT_T",
+	"CHANNELER": "MEDIUM",
+	"COOLTRAINER_M": "COOLTRAINERM",
+	"COOLTRAINER_F": "COOLTRAINERF",
+	"JR_TRAINER_M": "CAMPER",
+	"JR_TRAINER_F": "PICNICKER",
+	"PSYCHIC_TR": "PSYCHIC_T",
+	"ROCKER": "GUITARIST",
+	"ROCKET": "GRUNTM",
+	"SWIMMER": "SWIMMERM",
+	"PROF_OAK": "POKEMON_PROF",
+	"RIVAL3": "BLUE",
+	"LANCE": "CHAMPION",
+	"CUE_BALL": "BIKER",
+	"ENGINEER": "SCIENTIST",
+	"GAMBLER": "POKEFANM",
+	"TAMER": "FIREBREATHER",
+	"CHIEF": "GENTLEMAN"
+}

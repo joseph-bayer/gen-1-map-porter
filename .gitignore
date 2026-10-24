@@ -1,0 +1,7 @@
+node_modules/
+dist/
+web/dist/
+release/
+out/
+# a developer/test config for GEN1_MAP_PORTER_CONFIG (copy config.example.json)
+config.json
