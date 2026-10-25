@@ -30,7 +30,7 @@ included here.
 [launcher](https://github.com/joseph-bayer/crystal-tool-suite), click **Install** on Gen 1 Map
 Porter, then **Start**. It updates from there with one click.
 
-**On its own:** download the zip from [Releases](https://github.com/joseph-bayer/gen1-map-porter/releases),
+**On its own:** download the zip from [Releases](https://github.com/joseph-bayer/gen-1-map-porter/releases),
 unzip it anywhere, run `gen1-map-porter.exe`, and open <http://localhost:5174> in your browser.
 Nothing else needs installing.
 

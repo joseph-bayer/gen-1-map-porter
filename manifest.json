@@ -1,7 +1,7 @@
 {
 	"id": "gen1-map-porter",
 	"name": "Gen 1 Map Porter",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Ports Red, Blue and Yellow maps, with their events, into a Crystal project: CrystalShireEngine, pokecrystal or Polished Crystal.",
 	"icon": "icon.png",
 	"entry": {
